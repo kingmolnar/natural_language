@@ -1,5 +1,16 @@
 %  Translate written numbers into digits.
-%% comment?
+%  Try:
+%     ?- run.
+%
+% or something like:
+%     ?- number(N, [three,hundred,forty,five], []), roman(N, R, []).
+%     N = 345,
+%     R = [c, c, c, x, l, v] .
+%
+%     ?- number(N, [four,hundred,forty,nine], []), roman(N, R, []).
+%     N = 449,
+%     R = [c, d, x, l, i, x] 
+
 run :- read(Sentence),
 	number(N, Sentence, []),
 	write(N), nl,
